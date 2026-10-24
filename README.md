@@ -97,7 +97,7 @@ SCL outperformed the end-to-end baseline (+0.42 pp, paired t-test p = 0.016), bu
 
 ```bibtex
 @article{nugroho2026arts,
-  author  = {Nugroho, Triawan and Bilal, Muhammad},
+  author  = {Nugroho, Triawan and Bilal, Muhammad and Ashary, Ehab Bahaudien},
   title   = {Supervised Contrastive Learning with Magnitude-Based Pruning for Arabic Traffic Sign Recognition},
   journal = {Applied Sciences},
   year    = {2026},
