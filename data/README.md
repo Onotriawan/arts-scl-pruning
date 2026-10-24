@@ -1,6 +1,6 @@
 # ArTS dataset (not included)
 
-The Arabic Traffic Signs (ArTS) dataset was developed at Prince Mohammad Bin Fahd University (see reference [40] in the paper). Please obtain it from the original source and place it here:
+   The Arabic Traffic Signs (ArTS) dataset was developed at Prince Mohammad Bin Fahd University and is available on Mendeley Data: https://data.mendeley.com/datasets/4tznkn45mx/1 (see also reference [40] in the paper). Please download it from this source and place it here:
 
 ```
 data/ArabicTrafficSigns/
