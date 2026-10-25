@@ -48,15 +48,6 @@ INITIAL_SPARSITY = 0.30
 FINAL_SPARSITY = 0.80
 PRUNING_FREQUENCY = 100
 
-# Table 6 re-implementations, trained with OUR split, augmentation, head,
-# optimiser and early stopping, so only the architecture differs:
-#   resnet_v1   : ImageNet ResNet50 (V1)  ~ ResNet V1 of ref. [19]/b13
-#   densenet121 : ImageNet DenseNet121   ~ ref. [20]/b14
-#   le_cnn      : small CNN on 32x32     ~ ref. [33]/b17
-# LE-CNN re-implementation (ref. b17). The paper describes 3 conv blocks +
-# ReLU + max-pool, 3 dropout layers, flatten, softmax, 32x32 input, Adam 1e-3.
-# Filter counts / dropout rates are NOT given in our text: CHECK ref. b17 and
-# edit these values so the re-implementation matches it.
 LECNN_FILTERS = (32, 64, 128)
 LECNN_DROPOUT = (0.25, 0.25, 0.5)
 LECNN_LR = 1e-3
