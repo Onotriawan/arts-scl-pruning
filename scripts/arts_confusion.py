@@ -1,31 +1,3 @@
-"""
-Confusion matrices and per-class TP/FP/FN/TN for the ArTS multi-seed runs.
-
-Uses the files already saved by arts_multiseed.py (no retraining):
-    <dir>/y_test.npy
-    <dir>/pred_<config>_seed<N>.npy
-
-Example (Windows, same folder as arts_multiseed.py):
-    python arts_confusion.py --dirs results_ok results_run2 --out results_confusion
-
-Figure style (default: classic blue, bold, larger fonts):
-    --panel-source summed   2x2 panel summed over all seeds (default)
-    --panel-source median   2x2 panel of the median-accuracy seed (counts <= 30,
-                            closest to the original Figure 9)
-    --show-zeros            also print the zeros in light grey
-    --show-error-count      add '[N errors]' to the panel titles (off by default)
-    --style errors          previous error-focused style
-
-Optional class names (one name per line, in label order 0..23):
-    python arts_confusion.py --dirs results_ok results_run2 --names class_names.txt
-
-Outputs (in --out):
-    confusion_<cfg>_summed.csv / .png   confusion matrix summed over all seeds
-    confusion_<cfg>_seed<N>.png         matrix of the median-accuracy seed
-    perclass_<cfg>.csv / .tex           per-class TP, FP, FN, TN, precision, recall, F1
-    top_confusions_<cfg>.csv            most frequent misclassifications
-    summary_confusion.md                short text summary of all of the above
-"""
 import argparse
 import glob
 import os
