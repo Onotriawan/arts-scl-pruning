@@ -1,22 +1,3 @@
-"""
-Training / validation curves from the console logs of arts_multiseed.py
-(no retraining needed).
-
-Usage (Windows, Anaconda Prompt):
-    python plot_training_curves.py log1.txt log2.txt --out "D:\\my\\folder\\curves"
-The --out folder is created if it does not exist.
-
-The script
-  * splits each log into "===== seed S | group =====" blocks,
-  * splits each block into its training phases ("Epoch 1/..." restarts):
-      baseline groups : [main training, pruning fine-tuning]
-      two-stage groups: [stage 1 (no validation), stage 2, pruning fine-tuning]
-  * saves every curve to CSV and draws, for baseline and SCL:
-      (a) accuracy, (b) loss                    -> unpruned model
-      (c) accuracy, (d) loss                    -> pruning fine-tuning
-    All seeds are drawn as thin lines; the median-accuracy seed is drawn bold.
-  * draws the SCL / CE stage-1 training loss separately.
-"""
 import argparse
 import os
 import re
